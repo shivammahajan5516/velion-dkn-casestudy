@@ -1,0 +1,129 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: white;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    linear-gradient(120deg, rgba(0,0,0,0.75), rgba(0,0,0,0.35)),
+    url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1800&q=60");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.sub {
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+.grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.card h2 { margin: 0 0 12px 0; }
+
+.row { display: flex; gap: 10px; }
+
+.input, .select, .textarea {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.25);
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  outline: none;
+}
+
+.textarea { min-height: 90px; resize: vertical; }
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.85);
+  color: #111;
+  font-weight: 700;
+}
+
+.btn.secondary {
+  background: rgba(255,255,255,0.20);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.20);
+}
+
+.notice {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.40);
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.itemTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tagline { opacity: 0.85; margin-top: 6px; }
+
+@media (max-width: 920px) {
+  .grid { grid-template-columns: 1fr; }
+}
